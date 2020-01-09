@@ -1,6 +1,6 @@
 {
     "name": "cross-exit",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Gracefully terminate a script in Node.js or browsers.",
     "repository": "https://github.com/Richienb/cross-exit.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",

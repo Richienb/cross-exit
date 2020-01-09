@@ -32,7 +32,9 @@
         "catch",
         "window",
         "document",
-        "node"
+        "node",
+        "replacement",
+        "ponyfill"
     ],
     "dependencies": {},
     "devDependencies": {

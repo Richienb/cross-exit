@@ -1,6 +1,6 @@
 # Cross Exit [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/cross-exit/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/cross-exit)
 
-Gracefully terminate a script in Node.js or browsers.
+Gracefully terminate a script in Node.js or browsers. Works as a drop-in replacement for `process.exit`.
 
 [![NPM Badge](https://nodei.co/npm/cross-exit.png)](https://npmjs.com/package/cross-exit)
 
@@ -26,7 +26,14 @@ console.log("This message isn't logged.");
 
 ## API
 
-### crossExit()
+### crossExit(code?)
+
+#### code
+
+Type: `number`\
+Default: `0`
+
+The exit code.
 
 ### Compatibility
 

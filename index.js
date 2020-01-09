@@ -1,5 +1,5 @@
 "use strict"
 
-module.exports = () => {
-    process.exit()
+module.exports = (code) => {
+    process.exit(code || 0)
 }

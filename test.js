@@ -1,13 +1,13 @@
 import test from "ava"
-import theModule from "."
+import exit from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
+    let exitCalled = false
+    globalThis.process.exit = () => {
+        exitCalled = true
+    }
 
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    exit()
+
+    t.true(exitCalled)
 })

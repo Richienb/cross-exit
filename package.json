@@ -1,23 +1,39 @@
 {
-    "name": "the-module",
+    "name": "cross-exit",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Gracefully terminate a script in Node.js or browsers.",
+    "repository": "https://github.com/Richienb/cross-exit.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
+    "browser": "browser.js",
     "files": [
         "index.js",
-        "index.d.ts"
+        "index.d.ts",
+        "browser.js"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=4"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
+    "keywords": [
+        "exit",
+        "process",
+        "browser",
+        "error",
+        "terminate",
+        "graceful",
+        "silent",
+        "break",
+        "scope",
+        "catch",
+        "window",
+        "document",
+        "node"
+    ],
     "dependencies": {},
     "devDependencies": {
         "ava": "^2.4.0",
@@ -28,6 +44,11 @@
         "eslint": "^6.8.0"
     },
     "xo": {
-        "extends": "richienb/node"
+        "extends": "richienb",
+        "rules": {
+            "no-process-exit": 0,
+            "unicorn/no-process-exit": 0,
+            "unicorn/prefer-add-event-listener": 0
+        }
     }
 }

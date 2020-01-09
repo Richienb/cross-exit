@@ -1,14 +1,14 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Gracefully terminate a script in Node.js or browsers.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const exit = require("cross-exit");
+ *
+ * console.log("This message is logged.");
+ * exit();
+ * console.log("This message isn't logged.");
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function crossExit(): void;
 
-export = theModule;
+export = crossExit;

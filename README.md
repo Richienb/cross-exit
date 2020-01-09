@@ -1,41 +1,35 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Cross Exit [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/cross-exit/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/cross-exit)
 
-My awesome module.
+Gracefully terminate a script in Node.js or browsers.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/cross-exit.png)](https://npmjs.com/package/cross-exit)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install cross-exit
 ```
+
+## Strategy
+
+In Node.js, `cross-exit` uses `process.exit()` and in browsers, `window.onerror` is temporarily set to hide a termination error which is then thrown.
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const exit = require("cross-exit");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+console.log("This message is logged.");
+exit();
+console.log("This message isn't logged.");
 ```
 
 ## API
 
-### theModule(input, options?)
+### crossExit()
 
-#### input
+### Compatibility
 
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+-   Node.js: `>=4`
+-   Node.js with Babel: `>=0.1.13`
+-   Browsers: IE6+

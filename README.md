@@ -34,9 +34,3 @@ Type: `number`\
 Default: `0`
 
 The exit code.
-
-### Compatibility
-
--   Node.js: `>=4`
--   Node.js with Babel: `>=0.1.13`
--   Browsers: IE6+
